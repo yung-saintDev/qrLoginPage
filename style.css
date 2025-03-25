@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    background-color: black;
+    font-family: "Inter", sans-serif;
+    color: white;
+  }
+  
+  .header {
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .header-text {
+    font-size: 30px;
+  }
+  
+  .center-wrapper,
+  .scanner-wrapper {
+    height: calc(100vh - 80px); /* 100vh minus header height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scanner-wrapper {
+    display: none; /* Hidden by default */
+  }
+  
+  .button-text {
+    font-size: 25px;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .button-text:active {
+    color: rgba(255, 255, 255, 0.646);
+    border-color: rgba(255, 255, 255, 0.646);
+  }
+  
+  #qr-scanner {
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden; /* This clips the camera feed inside the box */
+    position: relative;
+  }
+  
+  #qr-scanner > * {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* ensures camera fills the box without stretching */
+  }
